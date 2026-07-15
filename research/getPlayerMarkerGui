@@ -1,0 +1,28 @@
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+local function getPlayerMarkerGui(): ScreenGui?
+	for _, gui in ipairs(PlayerGui:GetChildren()) do
+		if not gui:IsA("ScreenGui") then
+			continue
+		end
+
+		if string.sub(gui.Name, 1, 1) ~= "{" then
+			continue
+		end
+
+		local frame = gui:FindFirstChild("Frame")
+
+		if not frame then
+			continue
+		end
+
+		return gui
+	end
+
+	return nil
+end

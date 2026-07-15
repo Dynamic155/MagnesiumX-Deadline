@@ -1,0 +1,37 @@
+local SETTINGS = {
+	-- Character models are inside workspace.characters
+	CharactersFolder = workspace:WaitForChild("characters"),
+
+	-- Kill key
+	KillKey = Enum.KeyCode.PageDown,
+ 
+	-- Only add ESP to models named like "12345"
+	OnlyNumericNames = true,
+
+	-- Fixed ESP size settings
+	CharacterBoxHeightStuds = 6,
+	WidthToHeightRatio = 0.5,
+	BottomOffsetStuds = -3,
+
+	-- Adjust if box is slightly too high/low
+	ScreenYOffset = 0,
+
+	-- Team colors
+	TeamColor = Color3.fromRGB(111, 184, 194),
+	EnemyColor = Color3.fromRGB(126, 108, 190),
+	UnknownColor = Color3.fromRGB(255, 255, 255),
+
+	BoxThickness = 2,
+
+	ShowName = true,
+	ShowDistance = true,
+	ShowTeamText = false,
+	ShowTeamESP = false,
+
+	MaxDistance = 2000,
+
+	-- Refreshes team data from the remote every X seconds
+	TeamRefreshInterval = 1,
+
+	Debug = true,
+}
